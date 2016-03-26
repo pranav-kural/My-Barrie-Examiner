@@ -1,6 +1,6 @@
 # My Barrie Examiner
 
-My Barrie Examiner is a blog styled highly interactive news website. It is a platform that deliver the viewers with all the important news related to various categories, that happen in Barri on daily basis. This site provides latest news 24x7 and thrives to keep their viewers updated.
+My Barrie Examiner is a highly interactive news website. It is a platform that delivers the viewers with all the important news and all information about it, which maybe related to various categories, happening in the City of Barrie, ON. This site provides latest news, 24x7 a day and thrives to keep their viewers updated.
 
 # Site Concept and functionality
 
