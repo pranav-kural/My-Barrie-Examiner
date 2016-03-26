@@ -5,7 +5,7 @@
  *  -- Website: http://pranav-kural.github.io/My-Barrie-Examiner/ */
 
 /*------------- Animation-
---- On Mouse Hover -----*/
+--- On Mouse Hover ------*/
 var Selector;
 var Property;
 function onHover(selector, property, setValue) {
