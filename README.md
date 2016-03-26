@@ -4,14 +4,23 @@ My Barrie Examiner is a blog styled highly interactive news website. It is a pla
 
 # Site Concept and functionality
 
-Main features:
-    1. It is capable of providing the viewers with clear and distraction free views for reading articles.
-    2. Uses a new concept of short bracket viewers to view articles in a quick glance.
-    3. Extremely useful, yet completely new concept of navigating through the website, named - Throttle Through. Know more:   http://pranav-kural.github.io/throttle-basic
-    4. Uses concise and clear, and highly responsive Throttle CSS framework. Know More:   http://pranav-kural.github.io/throttle-basic
-    5. Flawlessly easy updating of information of any kind to the website. Adding articles, graphics or any other content within just a few clicks.
-    6. Highly interactive and responsive, yet light-weight and fast.
-    7. Exceptional website design and layout.
+The main features of the website and some of it's functionalities and benifits.
+
+#### Main features:
+
+1. It is capable of providing the viewers with clear and distraction free views for reading articles.
+    
+2. Uses a new concept of short bracket viewers to view articles in a quick glance.
+    
+3. Extremely useful, yet completely new concept of navigating through the website, named - Throttle Through. Know more:   http://pranav-kural.github.io/throttle-basic
+    
+4. Uses concise and clear, and highly responsive Throttle CSS framework. Know More:   http://pranav-kural.github.io/throttle-basic
+    
+5. Flawlessly easy updating of information of any kind to the website. Adding articles, graphics or any other content within just a few clicks.
+    
+6. Highly interactive and responsive, yet light-weight and fast.
+    
+7. Exceptional website design and layout.
 
 # Author
 
@@ -25,5 +34,6 @@ I believe in being a life-long learner, specially in Tech industry. I also belie
 
 Thank You.
 
-Pranav Kural
-(Just another Programming geek)
+Pranav Kural :)
+
+(Just another Geek Programmer and coffe addict)
