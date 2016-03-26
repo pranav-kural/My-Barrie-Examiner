@@ -4,7 +4,7 @@ My Barrie Examiner is a highly interactive news website. It is a platform that d
 
 # Site Concept and functionality
 
-The main features of the website and some of it's functionalities and benifits.
+The main features of the website and some of it's functionalities and benefits.
 
 #### Main features:
 
