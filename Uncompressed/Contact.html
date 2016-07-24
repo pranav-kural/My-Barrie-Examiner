@@ -1,0 +1,278 @@
+<!------------------------------------------------------------
+*  -- My Barrie Examiner --
+*  -- Author - Pranav Kural --
+*  -- Git: https://github.com/pranav-kural/My-Barrie-Examiner.git
+*  -- Website: http://pranav-kural.github.io/My-Barrie-Examiner/
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta title="The Barrie Examiner">
+    <link rel="stylesheet" href="Assets/css/styles.min.css">
+    <script src="Assets/js/jquery-1.12.3.min.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/common.min.js"></script>
+    <style>
+        .affix {
+            top: 0;
+        }
+
+        .affix + .container {
+            padding-top: 70px;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+        .Error {
+            display: none;
+            color: red;
+        }
+        #thankYou {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<a name="top"></a>
+<div class="container">
+    <div id="head"></div>
+    <div class="row">
+    <main role="main" class="col-lg-9 col-md-10 col-sm-12 col-xs-12">
+        <h1 class="text-center page-header title jumbotron">Contact Us form</h1>
+        <section class="top-stories col-lg-12 col-md-12 col-sm-12 col-xs-12" id="main-story">
+            <form name="UserProlfileForm" id="UserProlfileForm">
+                <fieldset>
+                    <legend class="col-lg-12 col-md-12 col-sm-12 col-xs-12">User Information</legend>
+                    <ul>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="SomeText" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">Enter some text:</label>
+                            <input type="text" placeholder="Enter some text" id="SomeText" class="input-sm col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <p class="Error" id="SomeTextErr" >Please enter some text</p>
+                        </li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="emailaddress1" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">Enter an email address:</label>
+                            <input type="email" id="emailaddress1" class="input-sm" class="col-lg-6 col-md-6 col-sm-12 col-xs-12"/>
+                            <p class="Error" id="emailaddress1Err">Please enter a valid email</p>
+                        </li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="tel1" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">Enter a telephone number:</label>
+                            <input type="tel" id="tel1" class="input-sm" class="col-lg-6 col-md-6 col-sm-12 col-xs-12"/>
+                            <p class="Error" id="tel1Err">Please enter a valid phone number</p>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>User Options</legend>
+                    <ul>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="Gender" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Gender</label>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="Gender" value="1" class="input-sm"/>
+                                    Male
+                                </li>
+                                <li>
+                                    <input type="radio" name="Gender" value="2" class="input-sm"/>
+                                    Female
+                                </li>
+                            </ul>
+                            <p class="Error" id="GenderErr">Please select a Gender</p>
+                        </li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="Options" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Options</label>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="Options" value="1" class="input-sm"/>
+                                    Send me email
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="Options" value="2" class="input-sm"/>
+                                    Subscribe to our newsletter
+                                </li>
+                            </ul>
+                            <p class="Error" id="OptionsErr">Please select an option</p>
+                        </li>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label for="Province">Province</label>
+                            <select id="Province">
+                                <option value="">--Choose--</option>
+                                <option value="ON">Ontario</option>
+                                <option value="BC">Britsh Columbia</option>
+                                <option value="YT">Yukon</option>
+                                <option value="MA">Manitoba</option>
+                            </select>
+                            <p class="Error" id="ProvinceErr">Please select a Province</p>
+                        </li>
+                    </ul>
+                </fieldset>
+
+
+                <p class="row center-block text-center">
+                    <input type="button" value="Validate" onclick="ValidateForm()" class="btn btn-info"/>
+                    <button type="reset" value="Reset" class="btn btn-danger">Reset</button>
+                </p>
+
+            </form>
+            <p class="jumbotron" id="thankYou">Thank You!</p>
+
+        </section>
+        <h1 id="small-nav-btn" class="hidden-lg hidden-md col-sm-2 col-xs-2" onclick="openNav()"><span
+                class="fa fa-bars"></span></h1>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="cards col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="index.html#article1">
+                    <div class="w3-card-4 card-red aside-card">
+                        <header class="w3-container card-head">
+                            <h1>Parliament fire</h1>
+                        </header>
+                        <div class="w3-container card-body">
+                            <p>It's difficult to imagine the scale of the trauma, the wartime anxiety, the shock, the
+                                anger,
+                                that
+                                would have engulfed the nation 100 years ago when the seat of the federal government
+                                went down
+                                in
+                                flames.Seven people died that bitterly cold night on Feb. 3, 1916, when the old Centre
+                                Block
+                                burned...</p>
+                        </div>
+                        <footer class="w3-container card-footer">
+                            <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                       class="share-icons"><span
+                                class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                                class="fa fa-comments"></span></a>
+                        </footer>
+                    </div>
+                </a>
+                <a href="index.html#article2">
+                    <div class="w3-card-4 card-green aside-card">
+                        <header class="w3-container card-head">
+                            <h1>CES 2016</h1>
+                        </header>
+                        <div class="w3-container card-body">
+                            <p>The automotive technology at CES 2016 covered 200,000 net square feet of space on the
+                                show floor.
+                                From car-sharing technology and electric cars to fully autonomous vehicle innovation,
+                                the auto
+                                industry showed off its most groundbreaking technology in...</p>
+                        </div>
+                        <footer class="w3-container card-footer">
+                            <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                       class="share-icons"><span
+                                class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                                class="fa fa-comments"></span></a>
+                        </footer>
+                    </div>
+                </a>
+                <a href="index.html#article3">
+                    <div class="w3-card-4 card-orange aside-card">
+                        <header class="w3-container card-head">
+                            <h1>Self-Driving Cars</h1>
+                        </header>
+                        <div class="w3-container card-body">
+                            <p>It is the year 2023, and for the first time, a self-driving car navigating city streets
+                                strikes and
+                                kills a pedestrian. A lawsuit is sure to follow. But exactly what laws will apply?
+                                Nobody knows.
+                                Today, the law is scrambling to keep...</p>
+                        </div>
+                        <footer class="w3-container card-footer">
+                            <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                       class="share-icons"><span
+                                class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                                class="fa fa-comments"></span></a>
+                        </footer>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Use dedent and outdent for nav menu icon -->
+    <!-- Use angle-double-left and chevron left vice versa for aside-->
+    <aside role="complementary" class="col-lg-3 col-md-2 hidden-sm hidden-xs">
+        <h1 id="main_head"
+            class="text-capitalize text-center text-info w3-text-shadow-white col-lg-12 col-md-12 hidden-sm hidden-xs">
+            Top Articles</h1>
+        <hr color="rgba(210, 237, 239, 1)" size="10px" type="dotted" class="hidden-sm hidden-xs col-lg-12 col-md-12">
+        <hr color="rgba(210, 237, 239, 1)" size="10px" type="dotted" class="hidden-sm hidden-xs col-lg-12 col-md-12">
+        <div class="cards col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <a href="index.html#article1">
+                <div class="w3-card-4 card-red aside-card">
+                    <header class="w3-container card-head">
+                        <h1>Parliament fire</h1>
+                    </header>
+                    <div class="w3-container card-body">
+                        <p>It's difficult to imagine the scale of the trauma, the wartime anxiety, the shock, the
+                            anger,
+                            that
+                            would have engulfed the nation 100 years ago when the seat of the federal government
+                            went down
+                            in
+                            flames.Seven people died that bitterly cold night on Feb. 3, 1916, when the old Centre
+                            Block
+                            burned...</p>
+                    </div>
+                    <footer class="w3-container card-footer">
+                        <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                   class="share-icons"><span
+                            class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                            class="fa fa-comments"></span></a>
+                    </footer>
+                </div>
+            </a>
+            <a href="index.html#article2">
+                <div class="w3-card-4 card-green aside-card">
+                    <header class="w3-container card-head">
+                        <h1>CES 2016</h1>
+                    </header>
+                    <div class="w3-container card-body">
+                        <p>The automotive technology at CES 2016 covered 200,000 net square feet of space on the
+                            show floor.
+                            From car-sharing technology and electric cars to fully autonomous vehicle innovation,
+                            the auto
+                            industry showed off its most groundbreaking technology in...</p>
+                    </div>
+                    <footer class="w3-container card-footer">
+                        <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                   class="share-icons"><span
+                            class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                            class="fa fa-comments"></span></a>
+                    </footer>
+                </div>
+            </a>
+            <a href="index.html#article3">
+                <div id="card" class="w3-card-4 card-orange aside-card">
+                    <header class="w3-container card-head">
+                        <h1>Self-Driving Cars</h1>
+                    </header>
+                    <div class="w3-container card-body">
+                        <p>It is the year 2023, and for the first time, a self-driving car navigating city streets
+                            strikes and
+                            kills a pedestrian. A lawsuit is sure to follow. But exactly what laws will apply?
+                            Nobody knows.
+                            Today, the law is scrambling to keep...</p>
+                    </div>
+                    <footer class="w3-container card-footer">
+                        <a href="#" class="share-icons"><span class="fa fa-facebook"></span></a><a href="#"
+                                                                                                   class="share-icons"><span
+                            class="fa fa-twitter"></span></a><a href="#" class="share-icons"><span
+                            class="fa fa-comments"></span></a>
+                    </footer>
+                </div>
+            </a>
+        </div>
+    </aside>
+    </div>
+    <div id="foot"></div>
+</div>
+<script type="text/javascript">
+    insertHeader();
+    insertFooter();
+</script>
+</body>
+</html>
